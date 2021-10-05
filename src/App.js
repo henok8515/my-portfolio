@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
+import "./App.scss";
+import Header from "./Components/Header/Header";
+import Testemoni from "./Components/Testemoni/Testemoni";
+import Contact from "./Components/Contact/Contact";
+import Work from "./Components/Works/Work";
+import Intro from "./Components/Intro/Intro";
+import Portfolio from "./Components/Portfolio/Portfolio";
+import Menu from "./Components/Menu/Menu";
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <div className="section">
+        {" "}
+        <Intro />
+        <Portfolio />
+        <Work />
+        <Testemoni />
+        <Contact />
+      </div>
     </div>
   );
 }

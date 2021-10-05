@@ -1,0 +1,36 @@
+.menu {
+  margin-top: 70px;
+  width: 300px;
+  height: 100vh;
+  background-color: rgb(2, 66, 243);
+  position: fixed;
+  top: 0;
+  right: -300px;
+
+  transition: all 2s ease;
+  .menu-content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50%;
+    overflow-y: hidden;
+    a {
+      margin-bottom: 20px;
+      font-size: 30px;
+      color: inherit;
+      font-weight: 300;
+      text-decoration: none;
+    }
+  }
+  &.active {
+    right: 0;
+  }
+  a:hover {
+    font-weight: 700;
+    color: gold;
+  }
+}
+.a-tag:hover {
+  color: gold;
+}

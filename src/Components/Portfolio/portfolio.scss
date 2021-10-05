@@ -1,0 +1,40 @@
+.portfolio {
+  h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    li {
+      display: flex;
+      margin: 10px 40px;
+      background-color: rgb(22, 20, 163);
+      height: 40px;
+      width: 100px;
+      border-radius: 10px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+  }
+  &:active {
+    li {
+    }
+  }
+  .container {
+    height: 400px;
+    width: 400px;
+    .item {
+      height: 100%;
+      img {
+        height: 50%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
