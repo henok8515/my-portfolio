@@ -1,12 +1,19 @@
 @import "../../global.scss";
 
 .works {
-  background-color: crimson;
+  background-color: rgb(18, 221, 28);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-
+  h1 {
+    z-index: 5;
+    margin-bottom: 450px;
+    font-size: 60px;
+    color: whitesmoke;
+    text-decoration: underline;
+    letter-spacing: 5px;
+  }
   .arrow {
     height: 50px;
     position: absolute;

@@ -1,9 +1,8 @@
 @import "../../global.scss";
 
 .contact {
-  background-color: rgb(35, 216, 223);
   display: flex;
-
+  background-color: whitesmoke;
   @include mobile {
     flex-direction: column;
   }
@@ -11,6 +10,14 @@
   .left {
     flex: 1;
     overflow: hidden;
+    background-color: rgb(10, 212, 185);
+    background-image: url("./handsome-business-african-american-man-pointing-side-png.png");
+    background-size: cover;
+    border-radius: 20%;
+    transition: all 2s ease;
+    &:hover {
+      background-color: rgba(12, 12, 184, 0.788);
+    }
 
     img {
       height: 100%;
@@ -66,6 +73,11 @@
         border-radius: 10px;
         font-weight: 500;
         cursor: pointer;
+        transition: all 1s ease;
+        &:hover {
+          background-color: black;
+          color: whitesmoke;
+        }
 
         &:focus {
           outline: none;
