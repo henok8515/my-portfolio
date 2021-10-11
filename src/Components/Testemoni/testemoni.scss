@@ -9,6 +9,7 @@
 
   @include mobile {
     justify-content: space-around;
+    height: 100vh;
   }
 
   h1 {
@@ -47,6 +48,7 @@
 
       @include mobile {
         height: 180px;
+        width: 50%;
         margin: 10px 0;
       }
 
@@ -77,15 +79,15 @@
             height: 25px;
           }
           &.user {
-            height: 80px;
-            width: 80px;
+            height: 100px;
+            width: 100px;
             border-radius: 50%;
             object-fit: cover;
             margin: 0 30px;
 
             @include mobile {
-              width: 30px;
-              height: 30px;
+              width: 50px;
+              height: 50px;
             }
           }
         }
@@ -97,8 +99,11 @@
         background-color: rgb(250, 244, 245);
 
         @include mobile {
-          font-size: 12px;
+          font-size: 10px;
+          height: 40px;
           padding: 5px;
+          overflow: hidden;
+          text-align: center;
         }
       }
       .bottom {
@@ -116,7 +121,7 @@
           }
         }
         h4 {
-          color: rgb(255, 4, 4);
+          color: rgb(225, 239, 248);
           font-size: 20px;
           @include mobile {
             font-size: 13px;

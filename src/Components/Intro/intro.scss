@@ -34,13 +34,15 @@
         align-items: flex-start;
         height: 300px;
         width: 300px;
+        justify-content: center;
+        align-items: center;
       }
 
       img {
         height: 100%;
 
         @include mobile {
-          height: 50%;
+          height: 100%;
         }
       }
     }
