@@ -10,9 +10,11 @@
 
   .left {
     flex: 0.5;
-    width: 50px;
+    width: 50%;
+    height: 100%;
+    align-self: center;
     overflow: hidden;
-    background-color: rgb(10, 212, 185);
+    background-color: rgb(109, 12, 33);
     background-image: url("./handsome-business-african-american-man-pointing-side-png.png");
     background-size: cover;
     border-radius: 20%;
@@ -21,6 +23,7 @@
       display: flex;
       justify-content: center;
       align-content: center;
+      background-color: rgb(10, 212, 185);
     }
     &:hover {
       background-color: rgba(12, 12, 184, 0.788);
