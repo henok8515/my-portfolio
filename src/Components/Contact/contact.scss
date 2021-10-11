@@ -3,18 +3,25 @@
 .contact {
   display: flex;
   background-color: whitesmoke;
+  height: 80vh;
   @include mobile {
     flex-direction: column;
   }
 
   .left {
-    flex: 1;
+    flex: 0.5;
+    width: 50px;
     overflow: hidden;
     background-color: rgb(10, 212, 185);
     background-image: url("./handsome-business-african-american-man-pointing-side-png.png");
     background-size: cover;
     border-radius: 20%;
     transition: all 2s ease;
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
     &:hover {
       background-color: rgba(12, 12, 184, 0.788);
     }
