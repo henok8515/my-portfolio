@@ -3,6 +3,7 @@
 .intro {
   background-color: white;
   display: flex;
+  flex-direction: row-reverse;
   height: 100vh;
   @include mobile {
     flex-direction: column;
@@ -10,25 +11,25 @@
   }
 
   .left {
-    flex: 0.5;
+    flex: 1;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 
     .imgContainer {
-      height: 500px;
+      height: 100%;
       width: 500px;
-      background-color: rgb(238, 0, 20);
-      border-radius: 40%;
+      margin-right: 10px;
       display: flex;
       align-items: center;
+      object-fit: cover;
       justify-content: center;
       float: right;
       transition: all 2s ease;
       cursor: pointer;
       &:hover {
-        background-color: blue;
+        background-color:white
       }
       @include mobile {
         align-items: flex-start;
@@ -47,8 +48,9 @@
       }
     }
   }
+
   .right {
-    flex: 0.5;
+    flex: 2;
     position: relative;
 
     .wrapper {
@@ -118,4 +120,7 @@
       }
     }
   }
+}
+h1{
+color: red;
 }
