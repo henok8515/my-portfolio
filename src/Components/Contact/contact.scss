@@ -3,19 +3,20 @@
 .contact {
   display: flex;
   height: 80vh;
+  
   @include mobile {
     flex-direction: column;
   }
 
   .left {
-    flex: 0.5;
-    width: 50%;
+     width: 50%;
     height: 100%;
     align-self: center;
     overflow: hidden;
     background-image: url("../../Assets/images/handsome-business-african-american-man-pointing-side-png.png");
     background-size: cover;
     border-radius: 20%;
+
     transition: all 2s ease;
     @include mobile {
       display: flex;
@@ -30,11 +31,14 @@
     }
   }
   .right {
-    flex: 1;
+  width: 34%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+ border: 1px solid rgb(248, 248, 248);
+ height: 90%;
+
 
     h2 {
       font-size: 30px;

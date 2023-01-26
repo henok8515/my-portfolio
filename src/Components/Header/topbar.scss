@@ -41,6 +41,7 @@
         }
 
         span {
+          display: none;
           font-size: 15px;
           font-weight: 500;
           color: white;
@@ -56,7 +57,10 @@
         flex-direction: column;
         justify-content: space-between;
         cursor: pointer;
-
+        @include mobile {
+          opacity: 1;
+        }
+        opacity: 0;
         span {
           width: 100%;
           height: 3px;
