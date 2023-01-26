@@ -29,7 +29,7 @@ export default function Intro() {
               fontSize: "120px",
             }}
           >
-            <span>  I'M Gelete</span>
+            <span>  I'M Henok</span>
           
           </h2>
           <h1
