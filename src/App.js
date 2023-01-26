@@ -8,12 +8,17 @@ import "./App.scss";
 import { useState } from "react";
 import Menu from "./Components/Menu/Menu";
 import About from "./Components/AboutME/About";
+import styled from "styled-components";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const Container = styled.div`
+    background-color: black;
+    color: white;
+  `;
   return (
-    <div className="app">
+    <Container>
       <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
@@ -24,7 +29,7 @@ function App() {
         <Testimonials />
         <Contact />
       </div>
-    </div>
+    </Container>
   );
 }
 
