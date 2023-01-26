@@ -47,7 +47,7 @@ export default function Testimonials() {
             <div className="bottom">
               <h4>{d.name}</h4>
               <h4>{d.title}</h4>
-            <span> <a target='_blank' href={d.github}>@{d.name}</a></span> 
+            <span> <a rel="noreferrer" target='_blank' href={d.github}>@{d.name}</a></span> 
             </div>
           </div>
         ))}
