@@ -4,7 +4,7 @@ import './portfolio.scss'
 function Portfolio() {
   return (
     <div className='portfolio'>
-      <h1>My Projects</h1>
+      <h1><span>My Projects</span></h1>
       <div className='project1_container'>
         <div className='project1'>
         <div className='project2_inside'>

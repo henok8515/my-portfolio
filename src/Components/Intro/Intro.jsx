@@ -29,7 +29,8 @@ export default function Intro() {
               fontSize: "120px",
             }}
           >
-            I'M Henok
+            <span>  I'M Henok</span>
+          
           </h2>
           <h1
             style={{
