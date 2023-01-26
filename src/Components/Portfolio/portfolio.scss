@@ -1,12 +1,67 @@
 @import "../../global.scss";
 
+
+.project1_inside{}
+.project2_inside{
+  align-self: flex-end;
+  height: 100%;
+  width: inherit;
+transition: all 1s ease-in-out;
+// visibility: hidden;
+background-color: rgba(0, 0, 0, 0.808);
+opacity: 0;
+display: flex;
+flex-direction: column;
+text-align: center;
+justify-content: center;
+align-items: center;
+color: whitesmoke;
+font-size: 30px;
+
+ 
+}
+.project2_inside:hover{
+  visibility: visible;
+  cursor: pointer;
+  opacity: 1;
+
+}
+
 .portfolio {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: rgb(0, 0, 0);
-  height: 100vh;
+  height: auto;
+  // background-color: black;
+.project1_container{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-bottom: 20px;
+}
+.project1{
+  border: 1px solid white;
+  border-radius: 10px;
 
+  height: 70vh;
+  width: 70vw;
+  align-self: flex-end;
+background-image: url('../../Assets//images/React-App\ \(1\).png');
+background-size: cover;
+} 
+.project2{
+  border-radius: 10px;
+display: flex;
+  height: 70vh;
+  width: 70vw;
+  background-size: cover;
+  align-self: flex-start;
+  flex-direction: column;
+  border: 1px solid white;
+
+  background-image: url('../../Assets/images/https-next-jsportfolio-netlify-app.png');
+} 
   h1 {
     font-size: 50px;
     border-bottom: 1px solid black;
