@@ -40,7 +40,7 @@ export default function Topbar({ menuOpen, setMenuOpen ,setDarkMode,darkMode }) 
          
   
         </div>
-        <div className="navs">
+        <div className="nav">
         <ul>
         <li onClick={() => setMenuOpen(false)}>
           <a href="#intro">Home</a>
