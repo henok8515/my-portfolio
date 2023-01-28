@@ -2,7 +2,7 @@ import React from "react";
 import './about.scss'
 function About() {
   return <div className="container">
-<div className="card-container">
+<div className="card-container" id="about">
 	<div className="front">
     <h1 ><span>About Me</span></h1>
   Hi, I'm Henok. A Software Engineer/React Developer with<span> 1+ years</span> of professional experience developing and maintaining web applications. I have a bachelor's degree in Computer Science with a passion for front-end development. I specialize in<span> Javascript</span>,<span> React</span>

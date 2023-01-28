@@ -17,6 +17,12 @@ justify-content: center;
 align-items: center;
 color: whitesmoke;
 font-size: 30px;
+@include mobile {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  font-size: 8px;
+}
 
  
 }
@@ -40,6 +46,13 @@ font-size: 30px;
   width: 100%;
   margin-bottom: 20px;
 overflow: hidden;
+@include mobile {
+ 
+  width: 90%;
+  background-size: cover;
+  font-size: 8px;
+}
+
 
 }
 .project1{
@@ -51,6 +64,13 @@ overflow: hidden;
 
 background-image: url('../../Assets//images/React-App\ \(1\).png');
 background-size: cover;
+@include mobile {
+background-image: url('../../Assets//images/React-App\ \(1\).png');
+
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+}
 } 
 .project2{
   border-radius: 10px;
@@ -63,6 +83,13 @@ display: flex;
   border: 1px solid white;
 
   background-image: url('../../Assets/images/https-next-jsportfolio-netlify-app.png');
+  @include mobile {
+    height: 200px;
+    width: 90%;
+    background-size: cover;
+    font-size: 82px;
+    align-self:center;
+  }
 } 
   h1 {
     font-size: 50px;
@@ -70,7 +97,7 @@ display: flex;
     margin-bottom: 20px;
     cursor: pointer;
     @include mobile {
-      font-size: 20px;
+      font-size: 30px;
     }
   }
 
@@ -97,6 +124,7 @@ display: flex;
     @include mobile {
       width: 100%;
     }
+
 
     .item {
       width: 220px;
@@ -138,4 +166,13 @@ display: flex;
       }
     }
   }
+  p {
+    color: red;
+    @include mobile {
+      font-size: 10px;
+    }
+  }
+}
+.button{
+  background-color: red;
 }

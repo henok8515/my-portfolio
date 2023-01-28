@@ -32,7 +32,7 @@ function App() {
         <Portfolio />
         <Works />
         <Testimonials />
-        <Contact />
+        <Contact darkMode={darkMode} />
       </div>
     </Container>
   );
