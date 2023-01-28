@@ -3,100 +3,155 @@
 .contact {
   display: flex;
   height: 80vh;
+width: 100%;
   
+  justify-content: center;
   @include mobile {
-    flex-direction: column;
+justify-content: center;
+display: flex;
+align-self: center;
+height: 40vh;
+width: 100%;
+
   }
 
-  .left {
-     width: 50%;
-    height: 100%;
-    align-self: center;
-    overflow: hidden;
-    background-image: url("../../Assets/images/handsome-business-african-american-man-pointing-side-png.png");
-    background-size: cover;
-    border-radius: 20%;
-
-    transition: all 2s ease;
-    @include mobile {
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      background-color: rgb(10, 212, 185);
-    }
-
-
-    img {
-      height: 100%;
-    }
-  }
   .right {
-  width: 34%;
+
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
  border: 1px solid rgb(248, 248, 248);
  height: 90%;
-
+ width: 30%;
+cursor: pointer;
+@include mobile {
+  width: 60%;
+}
 
     h2 {
       font-size: 30px;
     }
 
     form {
-      width: 70%;
+      width: 80%;
       height: 70%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
-
+@include mobile {
+  width: 80%;
+}
       input {
-        width: 300px;
         height: 30px;
-        font-size: 14px;
-
+        width: inherit;
         @include mobile {
-          width: 200px;
-          height: 20px;
         }
       }
 
       textarea {
-        width: 300px;
+    width: inherit;
         height: 200px;
-        font-size: 14px;
-
         @include mobile {
-          width: 200px;
-          height: 100px;
         }
       }
 
       button {
-        width: 150px;
+        width:inherit;
         height: 30px;
         color: white;
-        background-color: rgb(157, 20, 220);
+        background-color: rgb(255, 2, 2);
         border: none;
         border-radius: 10px;
         font-weight: 500;
         cursor: pointer;
         transition: all 1s ease;
-        &:hover {
-          background-color: black;
-          color: whitesmoke;
-        }
+    
 
         &:focus {
           outline: none;
         }
       }
 
-      span {
-        color: green;
+span{
+  color: green;
+}  
+    }
+  }
+  p{
+    color: red;
+  }
+}
+
+
+
+
+.right-dark {
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+border: 1px solid rgb(248, 248, 248);
+background-color: black;
+color: white;
+height: 90%;
+width: 30%;
+cursor: pointer;
+@include mobile {
+width: 60%;
+}
+
+  h2 {
+    font-size: 30px;
+  }
+
+  form {
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+@include mobile {
+width: 80%;
+}
+    input {
+      height: 30px;
+      width: inherit;
+      @include mobile {
       }
     }
+
+    textarea {
+  width: inherit;
+      height: 200px;
+      @include mobile {
+      }
+    }
+
+    button {
+      width:inherit;
+      height: 30px;
+      color: white;
+      background-color: rgb(255, 2, 2);
+      border: none;
+      border-radius: 10px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 1s ease;
+  
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+span{
+color: green;
+}  
   }
 }

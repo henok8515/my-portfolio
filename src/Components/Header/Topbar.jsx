@@ -37,22 +37,36 @@ export default function Topbar({ menuOpen, setMenuOpen ,setDarkMode,darkMode }) 
           <a href="#intro" className="logo">
           {name}
           </a>
-          {/* <div className="itemContainer">
-            <span>+251 943851525</span>
-          </div>
-          <div className="itemContainer">
-          <div><EmailIcon color={bg} onClick={() => copyToClipBoard('henokegezew44@gmail.com')} /> </div>
-           
-          </div>
-          <div className="itemContainer">
-          <Link href="https://github.com/henok8515"  target="_blank"  ><GitHubIcon /></Link>
-          </div> */}
-          <button onClick={()=>setDarkMode(!darkMode)}>
+         
+  
+        </div>
+        <div className="navs">
+        <ul>
+        <li onClick={() => setMenuOpen(false)}>
+          <a href="#intro">Home</a>
+        </li>
+        <li onClick={() => setMenuOpen(false)}>
+          <a href="#about">About</a>
+        </li>
+ 
+        <li onClick={() => setMenuOpen(false)}>
+          <a href="#work">Works</a>
+        </li>
+        <li onClick={() => setMenuOpen(false)}>
+          <a href="#testimonials">Testimonials</a>
+        </li>
+        <li onClick={() => setMenuOpen(false)}>
+          <a href="#contact">Contact</a>
+        </li>
+        
+      </ul>
+        </div>
+        <button onClick={()=>setDarkMode(!darkMode)}>
             {
               darkMode ?<ModeNightIcon /> : <LightModeOutlinedIcon /> 
             }
           </button>
-        </div>
+        
         <div className="right">
           <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
             <span className="line1"></span>

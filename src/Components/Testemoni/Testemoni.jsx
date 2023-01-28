@@ -34,7 +34,9 @@ export default function Testimonials() {
   ];
   return (
     <div className="testimonials" id="testimonials">
-      <h1><span>Testimonials</span></h1>
+      <h1 style={{
+        fontSize:'40px'
+      }}><span>Testimonials</span></h1>
       <div className="container">
         {data.map((d) => (
           <div className={d.featured ? "card featured" : "card"}>

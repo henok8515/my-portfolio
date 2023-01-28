@@ -1,47 +1,84 @@
+@import "../../global.scss";
+
+
 .card-container, .front {
-	width: 40rem;
-	height: 30rem;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
     transition: all 1s ease;
     font-size: small;
-	
- 
+
+
 }
 
+
  .back{
+	overflow: hidden;
     width: 30rem;
 	height: 30rem;
+	
+
 }
 .card-container {
+	overflow: hidden;
 	margin: 5rem;
     transition: all 1s ease;
 	display: flex;
 	flex-direction: row-reverse;
-	justify-content: space-around;
+	justify-content: center;
+	align-content: center;
 	width: 100vw;
+	@include mobile{
+		flex-direction: column;
+	padding: 0;
+	margin: 0;
+		justify-content: center;
+	 }
+
 
 }
 .front, .back {
+	overflow: hidden;
 	box-sizing: border-box;
     overflow: hidden;
 	padding: 2rem;
 	border-radius: 4px;
 	font-family: BlinkMacSystemFont, "Segoe UI", sans-serif;
 	font-size: 22px;
-	
+
 	text-transform: uppercase;
-    background-size: cover;
-    border: 1px solid black;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	@include mobile{
+		background-size: cover;
+		margin: 0;
+		padding: 1;
+		text-align: center;
+		font-size: 16px;
+		
+	 }
 }
 
 /* back side bg is orange gradient */ .back {
-	background-image:url('../../Assets/images/IMG_9086.jpg')
+	background-image:url('../../Assets/images/IMG_9086.jpg');
+	background-size: cover;
+
+	@include mobile {
+
+		margin:0;
+		padding: 0;
+		background-size: cover;
+		width: 80%;
+		align-self: center;
+	}
+
 
 }
 
 .card-container {
 	position: relative;
     overflow: hidden;
+	
 
 }
 .front, .back {
@@ -50,6 +87,7 @@
 	backface-visibility: hidden;
 	overflow: hidden;
     transition: all 1s ease;
+	
 
     overflow: hidden;
 }
@@ -65,13 +103,16 @@
 
 .card-container {
 	perspective: 75rem;
+	
+
 }
 .container{
+	overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-span{
-    color: red;
+	span{
+		color: red;
+	}
 }

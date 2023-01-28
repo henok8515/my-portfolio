@@ -1,32 +1,52 @@
-import { useState } from "react";
-import "./contact.scss";
+import { useState , useRef} from "react";
+import "./contact.scss"
+import emailjs from '@emailjs/browser';
 
-export default function Contact() {
+export default function Contact({darkMode}) {
   const [message, setMessage] = useState(false);
+  const [error, setError]=useState('') 
   const [input, setInput] = useState({
     email: "",
+    name: "",
     message: "",
   });
+  const form = useRef();
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setInput({...input, email:"", message:"",name:''})
+    emailjs.sendForm('service_fsumtqp', 'template_rp7bh5n', form.current, 'bIAsAM7oU7p4dGHia',{
+      reply_to: `${input.email}`,
+    })
+    .then((result) => {
+        console.log(result.text);
     setMessage(true);
-    console.log(input);
-    setInput({...input, email:"", message:""})
-  
-
+    }, (error) => {
+        console.log(error.text);
+        setError(error.text)
+    });
   };
   const handleChange = (e) => {
     setInput({...input, [e.target.name]: e.target.value });
   };
+  setTimeout(() =>{
+    setMessage(false)
+  },10000)
   return (
-    <div className="contact" id="contact">
-      <div className="left">
-        <img src="asset/man" alt="" />
-      </div>
-      <div className="right">
-        <h2>Contact Me</h2>
-        <form onSubmit={handleSubmit}>
+    <div className= 'contact' id="contact">
+      <div className={darkMode ? 'right-dark' : 'right'}>
+        <h1>Contact Me</h1>
+        <form ref={form} onSubmit={handleSubmit}>
+          
+        <input
+            name="name"
+            value={input.name}
+            onChange={handleChange}
+            type="text"
+            required
+            placeholder="name"
+          />
           <input
             name="email"
             value={input.email}
@@ -44,7 +64,8 @@ export default function Contact() {
           />
           <button type="submit">Send</button>
   
-          {message && input.email === '' ?' ':  <span>Thanks, I'll reply ASAP :)</span>}
+          {message &&  <span>Thanks, I'll reply ASAP :)</span>}
+          {error && <p>{error}</p>}
         </form>
       </div>
     </div>

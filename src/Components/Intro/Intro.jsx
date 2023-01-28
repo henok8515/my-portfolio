@@ -24,19 +24,11 @@ export default function Intro() {
       </div>
       <div className="right">
         <div className="wrapper">
-          <h2
-            style={{
-              fontSize: "120px",
-            }}
-          >
-            <span>  I'M Henok</span>
+          <h2>
+            <span> Hello  I'M Henok</span>
           
           </h2>
-          <h1
-            style={{
-              fontSize: "100px",
-            }}
-          >
+          <h1>
             I MAKE THINGS FOR THE WEB.
           </h1>
           <h3>
