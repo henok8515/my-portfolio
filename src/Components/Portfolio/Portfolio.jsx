@@ -14,10 +14,10 @@ function Portfolio() {
           }}>
           <h1>Molla
           </h1>
-          <p><span>Molla</span>  is a full-stack ecommerce website created on Mern stack technologies. We use the most recent technology and include Json web token (JWT) for authentication and authorisation requests.</p>
+          <p><span>Molla</span>  is a full-stack e-commerce website created on Mern stack technologies. We use the most recent technology and include Json web token (JWT) for authentication and authorisation requests.</p>
           <p><span>Tecnlogies</span> React ,Styled-components, Node-js , MongoDb , Express </p>
          <p> <span>Role</span>    Lead Front-end Developer</p>
-         <Button className='button' href='https://next-jsportfolio.netlify.app/' target="_blank" >Visit</Button>
+         <Button className='button' href='https://e-commerce-woad-zeta.vercel.app/' target="_blank" >Visit</Button>
           </div>
         </div>
 
