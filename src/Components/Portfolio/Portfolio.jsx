@@ -17,7 +17,7 @@ function Portfolio() {
           <p><span>Molla</span>  is a full-stack ecommerce website created on Mern stack technologies. We use the most recent technology and include Json web token (JWT) for authentication and authorisation requests.</p>
           <p><span>Tecnlogies</span> React ,Styled-components, Node-js , MongoDb , Express </p>
          <p> <span>Role</span>    Lead Front-end Developer</p>
-         <Button className='button' href='https://next-jsportfolio.netlify.app/' target="_blank" >Check Out</Button>
+         <Button className='button' href='https://next-jsportfolio.netlify.app/' target="_blank" >Visit</Button>
           </div>
         </div>
 
@@ -25,17 +25,14 @@ function Portfolio() {
       </div>
       <div className='project2'>
         <div className='project2_inside'>
-          <div style={{
-            width:'50%'
-
-          }}>
+          <div className='text'>
           <h1>
             Find Trend
           </h1>
           <p><span>FindTrend</span> is a responsive landing page to see the week's and current date's most popular news. </p>
           <p><span>Tecnlogies</span> Next-js , Tailwind css</p>
          <p> <span>Role</span>    Lead Front-end Developer</p>
-         <Button className='button' href='https://next-jsportfolio.netlify.app/' target="_blank" >Check Out</Button>
+         <Button className='button' href='https://next-jsportfolio.netlify.app/' target="_blank" >Visit</Button>
           </div>
         </div>
       </div>

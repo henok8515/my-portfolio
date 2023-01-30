@@ -4,15 +4,39 @@
   display: flex;
   height: 80vh;
 width: 100%;
+margin-top: 40px;
   
   justify-content: center;
   @include mobile {
 justify-content: center;
 display: flex;
 align-self: center;
-height: 40vh;
+height: 60vh;
 width: 100%;
 
+  }
+  .phone{
+    margin-top: 20px;
+    width: fit-content;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+    a{
+      color: white;
+    }
+    @include mobile {
+      margin-top: 20px;
+      width: fit-content;
+      font-size: 11px;
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      align-items: center;
+      justify-content: space-around;
+    }
   }
 
   .right {
@@ -27,12 +51,8 @@ width: 100%;
  width: 30%;
 cursor: pointer;
 @include mobile {
-  width: 60%;
+  width: 80%;
 }
-
-    h2 {
-      font-size: 30px;
-    }
 
     form {
       width: 80%;
@@ -61,10 +81,9 @@ cursor: pointer;
       button {
         width:inherit;
         height: 30px;
-        color: white;
-        background-color: rgb(255, 2, 2);
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
         border: none;
-        border-radius: 10px;
         font-weight: 500;
         cursor: pointer;
         transition: all 1s ease;
@@ -96,13 +115,13 @@ span{
   align-items: center;
   justify-content: center;
 border: 1px solid rgb(248, 248, 248);
-background-color: black;
+background-color: rgb(0, 0, 0);
 color: white;
 height: 90%;
 width: 30%;
 cursor: pointer;
 @include mobile {
-width: 60%;
+width: 80%;
 }
 
   h2 {
@@ -136,10 +155,9 @@ width: 80%;
     button {
       width:inherit;
       height: 30px;
-      color: white;
-      background-color: rgb(255, 2, 2);
+      color: rgb(0, 0, 0);
+      background-color: rgb(255, 253, 253);
       border: none;
-      border-radius: 10px;
       font-weight: 500;
       cursor: pointer;
       transition: all 1s ease;

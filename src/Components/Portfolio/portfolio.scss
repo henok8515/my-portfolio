@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 
-.project1_inside{}
+
 .project2_inside{
   align-self: flex-end;
   height: 100%;
@@ -30,6 +30,10 @@ font-size: 30px;
   visibility: visible;
   cursor: pointer;
   opacity: 1;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -39,12 +43,16 @@ font-size: 30px;
   align-items: center;
   // color: rgb(0, 0, 0);
   height: auto;
+  margin-bottom: 20px;
+
+
   // background-color: black;
 .project1_container{
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-bottom: 20px;
+ 
 overflow: hidden;
 @include mobile {
  
@@ -82,6 +90,7 @@ display: flex;
   flex-direction: column;
   border: 1px solid white;
 
+
   background-image: url('../../Assets/images/https-next-jsportfolio-netlify-app.png');
   @include mobile {
     height: 200px;
@@ -89,15 +98,19 @@ display: flex;
     background-size: cover;
     font-size: 82px;
     align-self:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 } 
   h1 {
+   
     font-size: 50px;
     border-bottom: 1px solid black;
-    margin-bottom: 20px;
+    margin-bottom:20px;
     cursor: pointer;
     @include mobile {
-      font-size: 30px;
+      font-size: 20px;
     }
   }
 
@@ -120,8 +133,10 @@ display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
     @include mobile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
     }
 
@@ -155,6 +170,11 @@ display: flex;
         height: 100%;
         object-fit: cover;
         z-index: 1;
+        @include mobile {
+              display: flex;
+    align-items: center;
+    justify-content: center;
+        }
       }
 
       &:hover {
@@ -167,12 +187,9 @@ display: flex;
     }
   }
   p {
-    color: red;
+    color: rgb(248, 248, 248);
     @include mobile {
       font-size: 10px;
     }
   }
-}
-.button{
-  background-color: red;
 }
