@@ -82,11 +82,13 @@
 
 }
 .front, .back {
-	top: 0;
-	left: 0;
 	backface-visibility: hidden;
 	overflow: hidden;
-    transition: all 1s ease;
+	@include mobile {
+		font-size: 14px;
+		height: 80%;
+	}
+	
 	
 
     overflow: hidden;
