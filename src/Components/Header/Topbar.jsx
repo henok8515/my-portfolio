@@ -40,7 +40,7 @@ export default function Topbar({ menuOpen, setMenuOpen ,setDarkMode,darkMode }) 
          
   
         </div>
-        <div className="nav">
+        <div className={`${darkMode ? 'nav' : 'nav-dark'}`}>
         <ul>
         <li onClick={() => setMenuOpen(false)}>
           <a href="#intro">Home</a>
@@ -69,9 +69,9 @@ export default function Topbar({ menuOpen, setMenuOpen ,setDarkMode,darkMode }) 
         
         <div className="right">
           <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-            <span className="line1"></span>
-            <span className="line2"></span>
-            <span className="line3"></span>
+            <span className={`${darkMode ? 'line' : 'line-dark'}`}></span>
+            <span className={`${darkMode ? 'line' : 'line-dark'}`}></span>
+            <span className={`${darkMode ? 'line' : 'line-dark'}`}></span>
           </div>
         </div>
       </div>

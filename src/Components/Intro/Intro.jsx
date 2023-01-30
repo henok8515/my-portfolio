@@ -1,8 +1,7 @@
 import "./intro.scss";
 import { init } from "ityped";
 import { useEffect, useRef } from "react";
-import { Button } from "@mui/material";
-import Pdf from '../../Assets/Henok.pdf'
+
 
 export default function Intro() {
   const textRef = useRef();
@@ -27,6 +26,8 @@ export default function Intro() {
       </div>
       <div className="right">
         <div className="wrapper">
+          <div>
+
           <h2>
             <span> Hey  I'M Henok</span>
           
@@ -37,20 +38,12 @@ export default function Intro() {
           <h3>
             Technologies <span ref={textRef}></span>
             </h3>
-        
-          <Button  href={Pdf} download="Henok Egezew" style={{
-            display:"flex",
-            alignSelf:'start',
             
-            backgroundColor:"black",
-     
-            
-       }} variant="contained"  >
-  Download Cv
-</Button>
-    
+          </div>
         </div>
+        
       </div>
+      
     </div>
   );
 }

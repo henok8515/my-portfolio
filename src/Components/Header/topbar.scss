@@ -14,20 +14,29 @@
     align-items: center;
     justify-content: space-between;
 
-ul {
-  width: 40vw;
-  display: flex;
-  justify-content: space-between;
-  
-  @include mobile {
-display: none;
-  }
-}
-a {
-  text-decoration: none;
-  color: red;
+  .nav ul li a {
+    color: black;
 
-}
+  }
+  .nav-dark ul li a {
+    color: rgb(238, 238, 238);
+
+  }
+
+    ul {
+      width: 40vw;
+      display: flex;
+      justify-content: space-between;
+      
+      @include mobile {
+        display: none;
+      }
+    }
+    a {
+      text-decoration: none;
+      
+    }
+  
     .left {
       display: flex;
       align-items: center;
@@ -58,7 +67,6 @@ a {
           display: none;
           font-size: 15px;
           font-weight: 500;
-          color: white;
         }
       }
     }
@@ -76,10 +84,17 @@ a {
           opacity: 1;
         }
         // opacity: 0;
-        span {
+        .line {
           width: 100%;
           height: 3px;
           background-color: $mainColor;
+          transform-origin: left;
+          transition: all 2s ease;
+        }
+        .line-dark{
+          width: 100%;
+          height: 3px;
+          background-color: white;
           transform-origin: left;
           transition: all 2s ease;
         }
@@ -95,7 +110,7 @@ a {
     .hamburger {
       span {
         &:first-child {
-          background-color: white;
+          background-color: rgb(230, 230, 230);
           transform: rotate(45deg);
         }
         &:nth-child(2) {
@@ -109,5 +124,4 @@ a {
     }
   }
 }
-.nav{
-}
+

@@ -25,13 +25,19 @@ function App() {
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
       />
-      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Menu darkMode={darkMode} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
         <Intro />
+        <hr />
         <About />
+        <hr />
+
         <Portfolio />
+        <hr />
         <Works />
+        <hr />
         <Testimonials />
+        <hr />
         <Contact darkMode={darkMode} />
       </div>
     </Container>
