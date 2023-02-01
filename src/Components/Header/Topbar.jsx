@@ -72,7 +72,7 @@ export default function Topbar({
             >
               {darkMode ? <ModeNightIcon /> : <LightModeOutlinedIcon />}
             </div>
-            <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+            <div className="hamburger" onClick={() => setMenuOpen(true)}>
               <span className={`${darkMode ? "line" : "line-dark"}`}></span>
               <span className={`${darkMode ? "line" : "line-dark"}`}></span>
               <span className={`${darkMode ? "line" : "line-dark"}`}></span>

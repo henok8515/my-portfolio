@@ -39,12 +39,11 @@
 .front, .back {
 
 	box-sizing: border-box;
-
+flex: 1;
 	padding: 2rem;
 	border-radius: 4px;
 	font-family: BlinkMacSystemFont, "Segoe UI", sans-serif;
 	font-size: 22px;
-
 	text-transform: capitalize;
 
     // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -59,8 +58,8 @@
 }
 
 /* back side bg is orange gradient */ .back {
-	background-image:url('../../Assets/images/IMG_9086.jpg');
-	background-size: cover;
+	// background-image:url('../../Assets/images/IMG_9086.jpg');
+	// background-size: cover;
 
 	@include mobile {
 
@@ -82,9 +81,11 @@
 }
 .front, .back {
 	backface-visibility: hidden;
+	font-size: 16px;
+
 
 	@include mobile {
-		font-size: 14px;
+		font-size: 16px;
 		height: 80%;
 	}
 	
@@ -97,21 +98,19 @@
 		margin: 0 20px;
 		color: black;
 		padding: 10;
+		:hover{
+			background-color: black;
+			color: white;
+		}
 		@include mobile {
 	
 		}
 	  }
 	  
 }
-// .back {
-// 	transform: rotateY(180deg);
-// }
-// .card-container:hover .front {
-// 	transform: rotateY(-180deg);
-// }
-// .card-container:hover .back {
-// 	transform: rotateY(0deg);
-// }
+.front {
+align-self: center;
+}
 
 .card-container {
 	perspective: 75rem;
@@ -119,14 +118,27 @@
 
 }
 .container{
-
+	height: 550px;
+	overflow: hidden;
+margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-  
 	margin-top: 30px;
 	margin-bottom: 20px;
 	span{
 		color: red;
 	}
+	@include mobile {
+		align-items: baseline;
+	height: 780px;
+
+	}
+
+
+	
 }
+
+
+
+

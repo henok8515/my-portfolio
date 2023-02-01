@@ -2,13 +2,15 @@ import { useState, useRef } from "react";
 import "./contact.scss";
 import emailjs from "@emailjs/browser";
 import {
-  Facebook,
   GitHub,
   LinkedIn,
   Phone,
   Share,
   Mail,
+  Telegram,
+  ArrowUpward,
 } from "@mui/icons-material";
+import { Link } from "@mui/material";
 export default function Contact({ darkMode }) {
   const [message, setMessage] = useState(false);
   const [error, setError] = useState("");
@@ -25,12 +27,10 @@ export default function Contact({ darkMode }) {
     //   icon: <Room className="icon" />,
     // },
     {
-      name: "Email",
       value: "henokegezew44@gmail.com",
       icon: <Mail className="icon" />,
     },
     {
-      name: "Phone",
       value: "0943851525",
       icon: <Phone className="icon" />,
     },
@@ -40,12 +40,16 @@ export default function Contact({ darkMode }) {
         <a
           rel="noreferrer"
           target="_blank"
-          href="https://codepen.io/movntains/pen/jpvyMJ"
+          href="https://www.linkedin.com/in/henok-egezew-0a460b208/"
         >
           <LinkedIn target="_blank" className="logo" />
         </a>,
-        <GitHub className="logo" />,
-        <Facebook className="logo" />,
+        <a rel="noreferrer" target="_blank" href="https://github.com/henok8515">
+          <GitHub className="logo" />
+        </a>,
+        <a rel="noreferrer" target="_blank" href="https://t.me/Matosxo">
+          <Telegram className="logo" />
+        </a>,
       ],
     },
   ];
@@ -89,7 +93,6 @@ export default function Contact({ darkMode }) {
             <div className="content" key={d.name}>
               <div className="img"> {d.icon}</div>
               <div className="names">
-                <p> {d.name}</p>
                 <p> {d.value}</p>
               </div>
             </div>
@@ -127,6 +130,9 @@ export default function Contact({ darkMode }) {
           </div>
         </form>
       </div>
+      <Link className="link" href="#intro">
+        <ArrowUpward />
+      </Link>
     </div>
   );
 }

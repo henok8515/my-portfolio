@@ -9,7 +9,7 @@ import { useState } from "react";
 import Menu from "./Components/Menu/Menu";
 import About from "./Components/AboutME/About";
 import styled from "styled-components";
-
+import Footer from "./Components/Footer/Footer";
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
@@ -20,7 +20,7 @@ function App() {
   `;
 
   return (
-    <Container>
+    <Container onClick={() => setMenuOpen(false)}>
       <Topbar
         darkMode={darkMode}
         setDarkMode={setDarkMode}
@@ -30,11 +30,13 @@ function App() {
       <Menu darkMode={darkMode} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
         <Intro />
+        <hr />
         <About />
         <Portfolio />
         <Works />
         <Testimonials />
         <Contact darkMode={darkMode} />
+        <Footer darkMode={darkMode} />
       </div>
     </Container>
   );
