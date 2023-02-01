@@ -1,25 +1,27 @@
 @import "../../global.scss";
 
 .topbar {
+
   height: 70px;
-  // border-bottom: 1px solid rgb(225, 225, 225);
+  // position: absolute;
   // z-index: 3;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
   cursor: pointer;
   transition: all 1s ease;
-  top: 0;
-  position: sticky;
-  display: flex;
-
-  position: -webkit-sticky;
+  border-bottom: 1px solid grey;
+display: flex;
   justify-content: space-between;
   top: 0; /* required */
   @include mobile {
     margin: 10px;
     top: 0;
-    position: sticky;
+
   }
-  .wrapper {
   
+  .wrapper {
+
     display: flex;
     align-items: center;
     justify-content: space-between;

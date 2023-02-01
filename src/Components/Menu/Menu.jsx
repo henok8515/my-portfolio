@@ -1,8 +1,14 @@
 import "./menu.scss";
 
-export default function Menu({ menuOpen, setMenuOpen,darkMode }) {
+export default function Menu({ menuOpen, setMenuOpen, darkMode }) {
   return (
-    <div className={`${darkMode ? "menu " + (menuOpen && "active") : "menu-dark " + (menuOpen && "active")}`}>
+    <div
+      className={`${
+        darkMode
+          ? "menu " + (menuOpen && "active")
+          : "menu-dark " + (menuOpen && "active")
+      }`}
+    >
       <ul>
         <li onClick={() => setMenuOpen(false)}>
           <a href="#intro">Home</a>
