@@ -4,7 +4,6 @@
   .sections {
     width: 100%;
     height: calc(100vh - 70px);
-  
     position: relative;
     top: 70px;
     scroll-behavior: smooth;
@@ -23,6 +22,12 @@
 
 body{
   text-transform: capitalize;
+    max-width: 1360px;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+  margin: auto;
+  background: white;
 
 
 }
