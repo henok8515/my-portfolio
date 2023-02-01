@@ -2,9 +2,8 @@
 
 
 .card-container, .front {
-	overflow: hidden;
+
 	width: 100vw;
-	height: 100vh;
     transition: all 1s ease;
     font-size: small;
 
@@ -13,14 +12,14 @@
 
 
  .back{
-	overflow: hidden;
+
     width: 30rem;
-	height: 30rem;
+
 	
 
 }
 .card-container {
-	overflow: hidden;
+
 	margin: 5rem;
     transition: all 1s ease;
 	display: flex;
@@ -38,15 +37,15 @@
 
 }
 .front, .back {
-	overflow: hidden;
+
 	box-sizing: border-box;
-    overflow: hidden;
+
 	padding: 2rem;
 	border-radius: 4px;
 	font-family: BlinkMacSystemFont, "Segoe UI", sans-serif;
 	font-size: 22px;
 
-	text-transform: uppercase;
+	text-transform: capitalize;
 
     // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 	@include mobile{
@@ -77,13 +76,13 @@
 
 .card-container {
 	position: relative;
-    overflow: hidden;
+
 	
 
 }
 .front, .back {
 	backface-visibility: hidden;
-	overflow: hidden;
+
 	@include mobile {
 		font-size: 14px;
 		height: 80%;
@@ -91,7 +90,7 @@
 	
 	
 
-    overflow: hidden;
+
 	#button{
 		background-color: rgb(255, 255, 255);
 		align-self: center;
@@ -120,11 +119,11 @@
 
 }
 .container{
-	overflow: hidden;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+  
 	margin-top: 30px;
 	margin-bottom: 20px;
 	span{

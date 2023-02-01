@@ -1,19 +1,54 @@
 @import "../../global.scss";
 
 .topbar {
-  width: 100%;
   height: 70px;
-  border-bottom: 1px solid rgb(225, 225, 225);
-  z-index: 3;
+  // border-bottom: 1px solid rgb(225, 225, 225);
+  // z-index: 3;
   cursor: pointer;
   transition: all 1s ease;
+  top: 0;
+  position: sticky;
+  display: flex;
 
+  position: -webkit-sticky;
+  justify-content: space-between;
+  top: 0; /* required */
+  @include mobile {
+    margin: 10px;
+    top: 0;
+    position: sticky;
+  }
   .wrapper {
-    padding: 10px 30px;
+  
     display: flex;
     align-items: center;
     justify-content: space-between;
+ 
+    width: 100%;
+    .nav {
+      height: 100%;
+      align-items: center;
+      ul {
+        justify-content: space-around;
+      height: 100%;
+  align-items: center;
 
+}
+
+    }
+    .nav-dark {
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      ul {
+      height: 100%;
+      justify-content: space-around;
+  
+  align-items: center;
+
+}
+
+    }
   .nav ul li a {
     color: black;
 
@@ -21,6 +56,9 @@
   .nav-dark ul li a {
     color: rgb(238, 238, 238);
 
+  }
+  button{
+    background-color:none;
   }
 
     ul {
@@ -40,7 +78,9 @@
     .left {
       display: flex;
       align-items: center;
-
+    margin-left: 20px;
+      height: 100%;
+flex: 1;
       .logo {
         font-size: 40px;
         font-weight: 700;
@@ -56,6 +96,7 @@
 
         @include mobile {
           display: none;
+          
         }
 
         .icon {
@@ -72,6 +113,16 @@
     }
 
     .right {
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      // flex-direction: row-reverse;
+
+      .navs {
+        display: flex;
+justify-content: center;
+align-items: center;      }
       .hamburger {
         width: 32px;
         height: 25px;
@@ -82,6 +133,7 @@
         opacity: 0;
         @include mobile {
           opacity: 1;
+          margin-left: 40px;
         }
         // opacity: 0;
         .line {
@@ -90,6 +142,8 @@
           background-color: $mainColor;
           transform-origin: left;
           transition: all 2s ease;
+          margin-right: 30px;
+
         }
         .line-dark{
           width: 100%;
@@ -97,12 +151,28 @@
           background-color: white;
           transform-origin: left;
           transition: all 2s ease;
+          margin-right: 30px;
+
         }
       }
     }
   }
 
+  .icons{
+
+font-size: 10px;
+  }
+
+  .icons-dark{
+ 
+
+font-size: 10px;
+  
+  }
+
   &.active {
+    top: 0;
+    position: sticky;
     // background-color: $mainColor;
     opacity: 0.9;
     color: white;
@@ -117,7 +187,7 @@
           opacity: 0;
         }
         &:last-child {
-          background-color: white;
+          background-color: rgb(87, 75, 75);
           transform: rotate(-45deg);
         }
       }

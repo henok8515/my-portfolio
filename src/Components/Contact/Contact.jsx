@@ -1,10 +1,14 @@
 import { useState, useRef } from "react";
 import "./contact.scss";
 import emailjs from "@emailjs/browser";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TelegramIcon from "@mui/icons-material/Telegram";
-import PhoneIcon from "@mui/icons-material/Phone";
-import { Link } from "@mui/material";
+import {
+  Facebook,
+  GitHub,
+  LinkedIn,
+  Phone,
+  Share,
+  Mail,
+} from "@mui/icons-material";
 export default function Contact({ darkMode }) {
   const [message, setMessage] = useState(false);
   const [error, setError] = useState("");
@@ -14,6 +18,37 @@ export default function Contact({ darkMode }) {
     message: "",
   });
   const form = useRef();
+  let data = [
+    // {
+    //   name: "Location",
+    //   value: "Addis Abeba Ethiopa",
+    //   icon: <Room className="icon" />,
+    // },
+    {
+      name: "Email",
+      value: "henokegezew44@gmail.com",
+      icon: <Mail className="icon" />,
+    },
+    {
+      name: "Phone",
+      value: "0943851525",
+      icon: <Phone className="icon" />,
+    },
+    {
+      icon: <Share className="icon" />,
+      value: [
+        <a
+          rel="noreferrer"
+          target="_blank"
+          href="https://codepen.io/movntains/pen/jpvyMJ"
+        >
+          <LinkedIn target="_blank" className="logo" />
+        </a>,
+        <GitHub className="logo" />,
+        <Facebook className="logo" />,
+      ],
+    },
+  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -47,17 +82,29 @@ export default function Contact({ darkMode }) {
   }, 10000);
   return (
     <div className="contact" id="contact">
-      <div className={darkMode ? "right-dark" : "right"}>
-        <h1>Contact Me</h1>
-        <form ref={form} onSubmit={handleSubmit}>
+      <h1>Contact Me</h1>
+      <div className={`${darkMode ? "container" : "container-dark"}`}>
+        <div className="left">
+          {data.map((d) => (
+            <div className="content" key={d.name}>
+              <div className="img"> {d.icon}</div>
+              <div className="names">
+                <p> {d.name}</p>
+                <p> {d.value}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <form className="right" ref={form} onSubmit={handleSubmit}>
           <input
             name="name"
             value={input.name}
             onChange={handleChange}
             type="text"
             required
-            placeholder="Name"
+            placeholder="name"
           />
+
           <input
             name="email"
             value={input.email}
@@ -71,25 +118,14 @@ export default function Contact({ darkMode }) {
             value={input.message}
             name="message"
             onChange={handleChange}
-            placeholder="Message"
+            placeholder="message"
           />
-          <button type="submit">Send</button>
-
-          {message && <span>Thanks, I'll reply ASAP :)</span>}
-          {error && <p>{error}</p>}
+          <div>
+            <button>send message</button>
+            {message && <span>Thanks, I'll reply ASAP :)</span>}
+            {error && <p>{error}</p>}
+          </div>
         </form>
-        <div className="phone">
-          <Link href="tel:0943851525">
-          <PhoneIcon  />
-          </Link>
-          <Link href='https://t.me/Matosxo' target='_blank'>
-          <TelegramIcon  />
-          </Link>
-          <Link href='https://www.linkedin.com/in/henok-egezew-0a460b208/' target='_blank'>
-          <LinkedInIcon />
-          </Link>
-
-        </div>
       </div>
     </div>
   );

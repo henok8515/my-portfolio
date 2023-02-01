@@ -13,10 +13,12 @@ import styled from "styled-components";
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  let color = "#010203";
   const Container = styled.div`
-    background-color: ${darkMode === true ? "white" : "black"};
-    color: ${darkMode === true ? "black" : "white"};
+    background-color: ${darkMode === true ? "#FDFCFC" : color};
+    color: ${darkMode === true ? color : "#FDFCFC"};
   `;
+
   return (
     <Container>
       <Topbar
@@ -28,16 +30,10 @@ function App() {
       <Menu darkMode={darkMode} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
         <Intro />
-        <hr />
         <About />
-        <hr />
-
         <Portfolio />
-        <hr />
         <Works />
-        <hr />
         <Testimonials />
-        <hr />
         <Contact darkMode={darkMode} />
       </div>
     </Container>
