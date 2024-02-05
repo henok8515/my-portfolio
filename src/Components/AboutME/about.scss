@@ -1,144 +1,115 @@
 @import "../../global.scss";
 
-
-.card-container, .front {
-
-	width: 100vw;
-    transition: all 1s ease;
-    font-size: small;
-
-
+.card-container,
+.front {
+  transition: all 1s ease;
+  font-size: small;
 }
 
-
- .back{
-
-    width: 30rem;
-
-	
-
+.back {
+  width: 30rem;
 }
 .card-container {
-
-	margin: 5rem;
-    transition: all 1s ease;
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: center;
-	align-content: center;
-	width: 100vw;
-	@include mobile{
-		flex-direction: column;
-	padding: 0;
-	margin: 0;
-		justify-content: center;
-	 }
-
-
+  margin: 5rem;
+  transition: all 1s ease;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
+  @include mobile {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
 }
-.front, .back {
+.front,
+.back {
+  box-sizing: border-box;
+  flex: 1;
+  padding: 2rem;
+  border-radius: 4px;
+  font-family: BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 22px;
+  text-transform: capitalize;
 
-	box-sizing: border-box;
-flex: 1;
-	padding: 2rem;
-	border-radius: 4px;
-	font-family: BlinkMacSystemFont, "Segoe UI", sans-serif;
-	font-size: 22px;
-	text-transform: capitalize;
-
-    // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-	@include mobile{
-		background-size: cover;
-		margin: 0;
-		padding: 1;
-		text-align: center;
-		font-size: 16px;
-		
-	 }
+  // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  @include mobile {
+    background-size: cover;
+    margin: 0;
+    padding: 1;
+    text-align: center;
+    font-size: 16px;
+  }
 }
 
-/* back side bg is orange gradient */ .back {
-	// background-image:url('../../Assets/images/IMG_9086.jpg');
-	// background-size: cover;
+/* back side bg is orange gradient */
+.back {
+  // background-image:url('../../Assets/images/IMG_9086.jpg');
+  // background-size: cover;
 
-	@include mobile {
-
-		margin:0;
-		padding: 0;
-		background-size: cover;
-		width: 80%;
-		align-self: center;
-	}
-
-
+  @include mobile {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    width: 80%;
+    align-self: center;
+  }
 }
 
 .card-container {
-	position: relative;
-
-	
-
+  position: relative;
 }
-.front, .back {
-	backface-visibility: hidden;
-	font-size: 16px;
+.front,
+.back {
+  backface-visibility: hidden;
+  font-size: 16px;
 
+  @include mobile {
+    font-size: 16px;
+    height: 80%;
+  }
 
-	@include mobile {
-		font-size: 16px;
-		height: 80%;
-	}
-	
-	
-
-
-	#button{
-		background-color: rgb(255, 255, 255);
-		align-self: center;
-		margin: 0 20px;
-		color: black;
-		padding: 10;
-		:hover{
-			background-color: black;
-			color: white;
-		}
-		@include mobile {
-	
-		}
-	  }
-	  
+  #button {
+    background-color: rgb(255, 255, 255);
+    align-self: center;
+    margin: 0 20px;
+    color: black;
+    padding: 10;
+    :hover {
+      background-color: black;
+      color: white;
+    }
+    @include mobile {
+    }
+  }
 }
 .front {
-align-self: center;
+  align-self: center;
 }
-
+.h2 {
+  font-family: sans-serif;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
 .card-container {
-	perspective: 75rem;
-	
-
+  perspective: 75rem;
 }
-.container{
-	height: 550px;
-	overflow: hidden;
-margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	margin-top: 30px;
-	margin-bottom: 20px;
-	span{
-		color: red;
-	}
-	@include mobile {
-		align-items: baseline;
-	height: 780px;
-
-	}
-
-
-	
+.container {
+  height: 700px;
+  overflow: hidden;
+  margin: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  span {
+    color: red;
+  }
+  @include mobile {
+    align-items: baseline;
+    height: 780px;
+  }
 }
-
-
-
-
